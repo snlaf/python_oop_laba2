@@ -10,3 +10,5 @@ arthur.name = "Arthur"
 edwin = Employee
 edwin.salary = 3600
 edwin.name = "Edwin"
+
+print(arthur.salary + edwin.salary)
