@@ -7,7 +7,7 @@ class Validator:
         return ('@' in str) and ('.' in str)
 
     def isPhone(self, str):
-        if len(str.split()) == 11:
+        if len(str.split("-")) == 11:
             return str
 
 
