@@ -7,9 +7,8 @@ class Validator:
         return ('@' in str) and ('.' in str)
 
     def isPhone(self, str):
-        import re
-        phone = re.match(r'\+7\ \([0-9]{3}\)\ [0-9]{3}-[0-9]{2}-[0-9]{2}', str)
-        return phone is not None
+        if len(str.split()) == 11:
+            return str
 
 
     def isDomain(self, domain):
@@ -20,7 +19,7 @@ class Validator:
 
 email = "example@example.com"
 phone_number = "+7-123-456-78-90"
-dom = "01-01-2022"
+dom = "asdf.ru"
 
 validator = Validator()
 
@@ -34,7 +33,7 @@ if validator.isPhone(phone_number):
 else:
     print("Номер телефона невалиден")
 
-if validator.isEmail(email):
+if validator.isDomain(dom):
     print("Адрес валиден")
 else:
     print("Адрес невалиден")
