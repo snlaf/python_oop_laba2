@@ -1,19 +1,13 @@
 class User:
-    def setAge(self, age):
-        if (age >= 0):
-            self.age = age
-        else:
-            raise Exception('need age more 0')
+	def set_age(self ,age):
+		if age >= 0:
+			self.age = age
+		else:
+			raise Exception('need age more 0')
 
-
-class Employee(User):
-    def setAge(self, age):
-        if (age <= 120):
-            super().setAge(age)
-        else:
-            raise Exception('need age less 120')
-
-employee = Employee()
-
-
-employee.setAge(10)
+class Employee:
+	def set_age(self, age):
+		if age >= 0 and age <= 120:
+			self.age = age
+		else:
+			raise Exception('Age out of range')
